@@ -32,5 +32,31 @@ export default createGlobalStyle`
     margin-right: auto
   }
 
+  .link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #333333;
+      transition: width .3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  @media all and (max-width: 1024px) {
+    .container {
+      max-width: 768px;
+    }
+  }
 
 `;

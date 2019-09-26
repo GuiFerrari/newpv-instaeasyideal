@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "next/link";
 
 import {
   Container,
@@ -9,7 +10,8 @@ import {
   Menu,
   ContainerItems,
   Item,
-  Link
+  ContainerIcon,
+  Bar
 } from "./styles";
 
 export default class Header extends Component {
@@ -24,12 +26,33 @@ export default class Header extends Component {
             <Menu>
               <ContainerItems>
                 <Item>
-                  <Link>Planos</Link>
-                  <Link>Blog</Link>
-                  <Link>Login</Link>
+                  <Link href="/users">
+                    <a className="link">Planos</a>
+                  </Link>
+                </Item>
+                <Item>
+                  <Link href="#">
+                    <a className="link">Blog</a>
+                  </Link>
+                </Item>
+                <Item>
+                  <Link href="#">
+                    <a className="link">Login</a>
+                  </Link>
                 </Item>
               </ContainerItems>
             </Menu>
+            {/* Icone menu aqui */}
+            <ContainerIcon
+              onClick={() => {
+                alert("Oi");
+              }}
+            >
+              <Bar />
+              <Bar />
+              <Bar />
+              <Bar />
+            </ContainerIcon>
           </ContainerHeader>
         </Content>
       </Container>
