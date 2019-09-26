@@ -25,6 +25,10 @@ export default createGlobalStyle`
     list-style: none;
   }
 
+  .hidden {
+    display: none;
+  }
+
   .container {
     max-width: 1200px;
     -webkit-box-sizing: content-box;

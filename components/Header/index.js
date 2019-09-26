@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import MenuLateral from "../Menu/index";
 
 import {
   Container,
@@ -11,10 +12,25 @@ import {
   ContainerItems,
   Item,
   ContainerIcon,
-  Bar
+  Bar,
+  ContainerMenuActive
 } from "./styles";
 
 export default class Header extends Component {
+  state = {
+    showMenu: false
+  };
+
+  changeClass = () => {
+    this.setState(prevState => ({
+      showMenu: !prevState.showMenu
+    }));
+  };
+
+  closeMenu = () => {
+    this.setState({ showModal: false });
+  };
+
   render() {
     return (
       <Container>
@@ -43,18 +59,21 @@ export default class Header extends Component {
               </ContainerItems>
             </Menu>
             {/* Icone menu aqui */}
-            <ContainerIcon
-              onClick={() => {
-                alert("Oi");
-              }}
-            >
-              <Bar />
+            <ContainerIcon onClick={this.changeClass}>
               <Bar />
               <Bar />
               <Bar />
             </ContainerIcon>
           </ContainerHeader>
         </Content>
+        <MenuLateral
+          state={this.state.showMenu}
+          handleCloseMenu={() => this.setState({ showMenu: false })}
+        />
+        <ContainerMenuActive
+          className={this.state.showMenu === false && "hidden"}
+          onClick={() => this.setState({ showMenu: false })}
+        />
       </Container>
     );
   }

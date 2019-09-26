@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import withAnalytics from "~/hocs/withAnalytics";
 import { Title } from "../styles/style";
+import Header from "../components/Header";
+import DobraPrincipal from "../components/DobraPrincipal";
 
 class Home extends Component {
   componentDidMount() {
@@ -8,7 +10,12 @@ class Home extends Component {
   }
 
   render() {
-    return <Title>Hello World</Title>;
+    return (
+      <>
+        <Header onClick={this.props.onClick} />
+        <DobraPrincipal />
+      </>
+    );
   }
 }
 
