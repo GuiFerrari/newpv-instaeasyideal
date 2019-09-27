@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import Colors from "~/utils/colors";
 
 export const ButtonCTA = styled.button`
-  background: #1bb30b;
+  background: ${Colors.Green};
   padding: 16px 48px;
   border: none;
   outline: none;
@@ -18,7 +19,7 @@ export const ButtonCTA = styled.button`
 
   &:hover {
     transition: all ease-in-out 0.3s;
-    background: #148607;
+    background: ${Colors.GreenHover};
     cursor: pointer;
   }
 

@@ -3,6 +3,7 @@ import withAnalytics from "~/hocs/withAnalytics";
 import Head from "next/head";
 import Header from "../components/Header";
 import DobraPrincipal from "../components/DobraPrincipal";
+import DobraComoFunciona from "../components/DobraComoFunciona";
 
 class Home extends Component {
   componentDidMount() {
@@ -19,6 +20,7 @@ class Home extends Component {
         </Head>
         <Header onClick={this.props.onClick} />
         <DobraPrincipal />
+        <DobraComoFunciona />
       </>
     );
   }

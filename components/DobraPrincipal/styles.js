@@ -1,21 +1,20 @@
 import styled from "styled-components";
+import Colors from "~/utils/colors";
 
 export const Container = styled.div`
   background-image: url(/static/jetpack.svg);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 75% 110px;
+  background-position: 75% 0;
   background-size: 30%;
+  padding-bottom: 40px;
 
   @media all and (max-width: 1440px) {
-    background-position: 80% 110px;
+    background-position: 89% 0;
+    background-size: 40%;
   }
 
   @media all and (max-width: 1024px) {
-    background-image: url(/static/jetpack.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 125% 110px;
+    background-position: 125% 0;
     background-size: 50%;
   }
 
@@ -51,7 +50,7 @@ export const Title = styled.h1`
 export const TitleWithStrong = styled.strong``;
 
 export const TitleWithUnderline = styled.span`
-  border-bottom: 8px solid #ffce0b;
+  border-bottom: 8px solid ${Colors.Primary};
 `;
 
 export const SubTitle = styled.h2`
