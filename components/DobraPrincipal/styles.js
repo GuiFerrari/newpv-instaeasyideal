@@ -1,11 +1,42 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  background-image: url(/static/jetpack.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 75% 110px;
+  background-size: 30%;
+
+  @media all and (max-width: 1440px) {
+    background-position: 80% 110px;
+  }
+
+  @media all and (max-width: 1024px) {
+    background-image: url(/static/jetpack.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 125% 110px;
+    background-size: 50%;
+  }
+
+  @media all and (max-width: 768px) {
+    background-image: none;
+    padding: 0 20px;
+  }
+`;
 
 export const ContainerInfos = styled.div`
   width: 100%;
   max-width: 540px;
   margin-top: 40px;
+
+  @media all and (max-width: 768px) {
+    width: 100%;
+    max-width: 540px;
+    margin-top: 40px;
+    margin: 0 auto;
+    text-align: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -39,6 +70,10 @@ export const ContainerPlatforms = styled.div`
   width: 100%;
   max-width: 386px;
   margin-top: 16px;
+
+  @media all and (max-width: 768px) {
+    margin: 16px auto 0;
+  }
 `;
 
 export const Platforms = styled.div`

@@ -21,4 +21,10 @@ export const ButtonCTA = styled.button`
     background: #148607;
     cursor: pointer;
   }
+
+  @media all and (max-width: 425px) {
+    padding: 16px 24px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 `;
