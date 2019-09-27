@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import withAnalytics from "~/hocs/withAnalytics";
-import { Title } from "../styles/style";
+import Head from "next/head";
 import Header from "../components/Header";
 import DobraPrincipal from "../components/DobraPrincipal";
 
@@ -12,6 +12,11 @@ class Home extends Component {
   render() {
     return (
       <>
+        <Head>
+          <title>
+            Instaeasy - App para ganhar seguidores no Instagram automaticamente
+          </title>
+        </Head>
         <Header onClick={this.props.onClick} />
         <DobraPrincipal />
       </>
